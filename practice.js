@@ -255,7 +255,7 @@ methodCollection.logHello();
 
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
- function makePerson(name, birthday, ssn) {
+ function MakePerson(name, birthday, ssn) {
      this.name = name;
      this.birthday = birthday;
      this.ssn = ssn;
@@ -269,7 +269,7 @@ methodCollection.logHello();
 
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
-  function makeCard(name, cardNum, expDate, cvn) {
+  function MakeCard(name, cardNum, expDate, cvn) {
       this.name = name;
       this.cardnum = cardNum;
       this.expDate = expdate;
@@ -290,8 +290,13 @@ methodCollection.logHello();
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
 */
 
- function bindCard(makePerson, makeCard) {
-     
+ function bindCard(person, cc) {
+     return{
+     person: person,
+         card:card,
+     }
+   
+ 
  }
 
 
